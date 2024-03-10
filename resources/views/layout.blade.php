@@ -1,81 +1,322 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"> <!-- Устанавливает кодировку документа на UTF-8 (Unicode). -->
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> <!-- Определяет метаданные для масштабирования и отображения на мобильных устройствах. -->
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!-- Устанавливает совместимость с браузером Internet Explorer. -->
-    <title>@yield('title')</title> <!-- Устанавливает заголовок страницы, значение будет вставлено вместо '@yield('title')'. -->
 
-    <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js']) <!-- Вставляет скрипты (возможно, используется как шаблонизатор, подставляющий пути к скриптам). -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--
+      - primary meta tags
+    -->
+    <title>EuroCipari</title>
+    <meta name="EuroCipari" content="Business System">
+
+    <!--
+      - favicon
+    -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+    <!--
+      - google font link
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+
+    <!--
+      - custom css link
+    -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!--
+      - preload images
+    -->
+    <link rel="preload" as="image" href="./assets/images/hero-bg.jpg">
+    <link rel="preload" as="image" href="./assets/images/hero-slide-1.jpg">
+    <link rel="preload" as="image" href="./assets/images/hero-slide-2.jpg">
+    <link rel="preload" as="image" href="./assets/images/hero-slide-3.jpg">
 
 </head>
-<body class="bg-dark"> <!-- Устанавливает класс 'bg-dark' для всего тела документа, устанавливая темный фон. -->
 
-<div class="container py-3"> <!-- Создает контейнер с отступами сверху и снизу. Сontainer-fluid (na ves ekran) -->
-    <header>
-        <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
-            <a href="/" class="d-flex align-items-center text-light text-decoration-none">
-                <!-- <img src="{{ asset('/images/preview.png') }}" width="50" height="50" alt=""> -->
-                <!-- Создает ссылку с логотипом или текстом 'EuroCipari' и устанавливает стили. -->
-                <span class="fs-4">EuroCipari</span>
-            </a>
+<body>
 
-            <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto"> <!-- Создает навигационное меню. -->
-                <a class="me-3 py-2 text-light text-decoration-none" href="{{route('about')}}">About</a> <!-- Создает ссылку "About". -->
-                <a class="me-3 py-2 text-light text-decoration-none" href="{{route('services')}}">Services</a> <!-- Создает ссылку "Services". -->
-                <a class="me-3 py-2 text-light text-decoration-none" href="{{route('blog.index')}}">Blog</a> <!-- Создает ссылку "Blog". -->
-                <a class="me-3 py-2 text-light text-decoration-none" href="{{route('contacts.index')}}">Questions</a>
-                <a class="me-3 py-2 text-light text-decoration-none" href="{{route('login')}}">Log In</a> <!-- Создает ссылку "Log In". -->
-            </nav>
-        </div>
-    </header>
-
-    <div class="container text-light">@yield("main_content")</div> <!-- Создает контейнер для основного контента. Значение '@yield("main_content")' будет вставлено здесь. -->
-</div>
-
-<!-- <footer class="fixed-bottom d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
-    <div class="col-md-4 d-flex align-items-center">
-        <a href="/" class="mb-3 me-2 mb-md-0 lh-1 text-light">
-            <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-        </a>
-        <span class="mb-3 mb-md-0 text-light">© 2023 Company "EuroCipari", Inc - All Rights Reserved</span>
-    </div>
-
-    <div class="bg-transparent text-center text-white">
-        <div class="container p-4 pb-0">
-            <section class="mb-4">
-                <a
-                    class="btn text-white btn-floating m-1"
-                    href="https://www.facebook.com/V.a.l.i.k.63?locale=ru_RU"
-                    role="button"
-                >
-                    <img src="{{ asset('/images/facebook.png') }}" alt="" />
-                </a>
-
-                <a
-                    class="btn text-white btn-floating m-1"
-                    href="https://www.instagram.com/v.a.l.i.k_63/"
-                    role="button"
-                >
-                    <img src="{{ asset('/images/instagram.png') }}" alt="" />
-                </a>
-
-                <a
-                    class="btn text-white btn-floating m-1"
-                    href="https://www.linkedin.com/in/valentin-kasper-7a9939286/"
-                    role="button"
-                >
-                    <img src="{{ asset('/images/linkedin.png') }}" alt="" />
-                </a>
-            </section>
-        </div>
-    </div>
-
-
-</footer>
+<!--
+  - #HEADER
 -->
 
+<header class="header" data-header>
+    <div class="container">
+
+        <a href="#" class="logo">
+            <img src="./assets/images/logo-light.svg" width="74" height="24" alt="" class="logo-light">
+
+            <img src="./assets/images/logo-dark.svg" width="74" height="24" alt="" class="logo-dark">
+        </a>
+
+        <nav class="navbar" data-navbar>
+
+            <div class="navbar-top">
+                <a href="#" class="logo">
+                    <img src="./assets/images/logo-light.svg" width="74" height="24" alt="">
+                </a>
+
+            </div>
+
+            <ul class="navbar-list">
+
+                <li>
+                    <a href="#" class="navbar-link">Home</a>
+                </li>
+
+                <li>
+                    <a href="#" class="navbar-link">About</a>
+                </li>
+
+                <li>
+                    <a href="#" class="navbar-link">Blog</a>
+                </li>
+
+                <li>
+                    <a href="#" class="navbar-link">Contacts</a>
+                </li>
+
+                <li>
+                    <a href="#" class="navbar-link">Questions</a>
+                </li>
+
+                <li>
+                    <a href="#" class="navbar-link">Bills and payment</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <a href="#" class="btn btn-primary">Admin panel</a>
+
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        </button>
+
+        <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+</header>
+
+
+
+
+
+<main>
+    <article>
+
+        <!--
+          - #HERO
+        -->
+
+        <section class="section hero has-bg-image" aria-label="home"
+                 style="background-image: url('./assets/images/hero-bg.jpg')">
+            <div class="container">
+
+                <div class="hero-content">
+
+                    <h1 class="h1 hero-title">Crafting project specific solutions with expertise.</h1>
+
+                    <p class="hero-text">
+                        We’re a creative company that focuses on establishing long-term relationships with customers.
+                    </p>
+
+                    <div class="btn-wrapper">
+
+                        <a href="#" class="btn btn-primary">Explore Now</a>
+
+                        <a href="#" class="btn btn-outline">Contact Us</a>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-slider" data-slider>
+
+                    <div class="slider-inner">
+                        <ul class="slider-container" data-slider-container>
+
+                            <li class="slider-item">
+
+                                <figure class="img-holder" style="--width: 575; --height: 550;">
+                                    <img src="./assets/images/hero-slide-1.jpg" width="575" height="550" alt="" class="img-cover">
+                                </figure>
+
+                            </li>
+
+                            <li class="slider-item">
+
+                                <div class="hero-card">
+                                    <figure class="img-holder" style="--width: 575; --height: 550;">
+                                        <img src="./assets/images/hero-slide-2.jpg" width="575" height="550" alt="hero banner"
+                                             class="img-cover">
+                                    </figure>
+                                </div>
+
+                            </li>
+
+                            <li class="slider-item">
+
+                                <figure class="img-holder" style="--width: 575; --height: 550;">
+                                    <img src="./assets/images/hero-slide-3.jpg" width="575" height="550" alt="" class="img-cover">
+                                </figure>
+
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <button class="slider-btn prev" aria-label="slide to previous" data-slider-prev>
+                    </button>
+
+                    <button class="slider-btn next" aria-label="slide to next" data-slider-next>
+                    </button>
+
+                </div>
+
+            </div>
+        </section>
+
+        @yield('content')
+
+    </article>
+</main>
+
+
+
+
+
+<!--
+  - #FOOTER
+-->
+
+<footer class="footer">
+    <div class="container grid-list">
+
+        <div class="footer-brand">
+
+            <a href="#" class="logo">
+                <img src="./assets/images/logo-light.svg" width="74" height="24" alt="Adex home">
+            </a>
+
+            <p class="footer-text">
+                &copy; 2022 codewithsadee. <br> All rights reserved.
+            </p>
+
+            <ul class="social-list">
+
+                <li>
+                    <a href="#" class="social-link">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="social-link">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="social-link">
+                        <ion-icon name="logo-dribbble"></ion-icon>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="social-link">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="social-link">
+                        <ion-icon name="logo-youtube"></ion-icon>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <ul class="footer-list">
+
+            <li>
+                <p class="h4 footer-list-title">Get in Touch</p>
+            </li>
+
+            <li>
+                <address class="footer-text">
+                    Moonshine St. 14/05 Light City, London, United Kingdom
+                </address>
+            </li>
+
+            <li>
+                <a href="mailto:info@email.com" class="footer-link">info@email.com</a>
+            </li>
+
+            <li>
+                <a href="tel:001234567890" class="footer-link">00 (123) 456 78 90</a>
+            </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+            <li>
+                <p class="h4 footer-list-title">Learn More</p>
+            </li>
+
+            <li>
+                <a href="#" class="footer-link">About Us</a>
+            </li>
+
+            <li>
+                <a href="#" class="footer-link">Our Story</a>
+            </li>
+
+            <li>
+                <a href="#" class="footer-link">Projects</a>
+            </li>
+
+            <li>
+                <a href="#" class="footer-link">Terms of Use</a>
+            </li>
+
+            <li>
+                <a href="#" class="footer-link">Privacy Policy</a>
+            </li>
+
+        </ul>
+
+        <div class="footer-list">
+
+            <p class="h4 footer-list-title">Our Newsletter</p>
+
+            <p class="footer-text">
+                Subscribe to our newsletter to get our news & deals delivered to you.
+            </p>
+
+            <form action="" class="input-wrapper">
+                <input type="email" name="email_address" placeholder="Email Address" required class="input-field">
+
+                <button type="submit" class="submit-btn">Join</button>
+            </form>
+
+        </div>
+
+    </div>
+</footer>
+
+
+<script src="./assets/js/script.js"></script>
+
+
 </body>
+
 </html>

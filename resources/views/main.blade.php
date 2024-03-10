@@ -1,3 +1,409 @@
+@extends('layout')
+
+@section('content')
+
+
+<!--
+  - #SERVICE
+-->
+
+<section class="section service" aria-labelledby="service-label">
+    <div class="container">
+
+        <p class="section-subtitle" id="service-label">What We Do?</p>
+
+        <h2 class="h2 section-title">
+            The service we offer is specifically designed to meet your needs.
+        </h2>
+
+        <ul class="grid-list">
+
+            <li>
+                <div class="service-card">
+
+                    <h3 class="h4 card-title">24/7 Support</h3>
+
+                    <p class="card-text">
+                        Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras
+                        justo.
+                    </p>
+
+                    <a href="#" class="btn-text">
+                        <span class="span">Learn More</span>
+
+                    </a>
+
+                </div>
+            </li>
+
+
+            <li>
+                <div class="service-card">
+
+                    <h3 class="h4 card-title">Secure Payments</h3>
+
+                    <p class="card-text">
+                        Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras
+                        justo.
+                    </p>
+
+                    <a href="#" class="btn-text">
+                        <span class="span">Learn More</span>
+
+                    </a>
+
+                </div>
+            </li>
+
+
+            <li>
+                <div class="service-card">
+
+                    <h3 class="h4 card-title">Daily Updates</h3>
+
+                    <p class="card-text">
+                        Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras
+                        justo.
+                    </p>
+
+                    <a href="#" class="btn-text">
+                        <span class="span">Learn More</span>
+                    </a>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="service-card">
+
+                    <h3 class="h4 card-title">Market Research</h3>
+
+                    <p class="card-text">
+                        Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras
+                        justo.
+                    </p>
+
+                    <a href="#" class="btn-text">
+                        <span class="span">Learn More</span>
+                    </a>
+
+                </div>
+            </li>
+
+        </ul>
+
+    </div>
+</section>
+
+
+
+<!--
+  - #FEATURE
+-->
+
+<section class="section feature" aria-labelledby="feature-label">
+    <div class="container">
+
+        <figure class="feature-banner">
+            <img src="./assets/images/feature-banner.png" width="800" height="531" loading="lazy" alt="feature banner"
+                 class="w-100">
+        </figure>
+
+        <div class="feature-content">
+
+            <p class="section-subtitle" id="feautre-label">Our Solutions</p>
+
+            <h2 class="h2 section-title">
+                We make your spending stress-free for you to have the perfect control.
+            </h2>
+
+            <p class="section-text">
+                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio,
+                dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus.
+            </p>
+
+            <ul class="feature-list">
+
+                <li>
+                    <div class="feature-card">
+
+                        <div class="card-icon">
+                            <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                        </div>
+
+                        <span class="span">
+                    Aenean quam ornare. Curabitur blandit.
+                  </span>
+
+                    </div>
+                </li>
+
+                <li>
+                    <div class="feature-card">
+
+                        <div class="card-icon">
+                            <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                        </div>
+
+                        <span class="span">
+                    Nullam quis risus eget urna mollis ornare.
+                  </span>
+
+                    </div>
+                </li>
+
+                <li>
+                    <div class="feature-card">
+
+                        <div class="card-icon">
+                            <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                        </div>
+
+                        <span class="span">
+                    Etiam porta euismod malesuada mollis.
+                  </span>
+
+                    </div>
+                </li>
+
+                <li>
+                    <div class="feature-card">
+
+                        <div class="card-icon">
+                            <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                        </div>
+
+                        <span class="span">
+                    Vivamus sagittis lacus vel augue rutrum.
+                  </span>
+
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+<!--
+  - #STATS
+-->
+
+<section class="stats" aria-label="our stats">
+    <div class="container">
+
+        <ul class="stats-card has-bg-image" style="background-image: url('./assets/images/stats-bg.jpg')">
+
+            <li>
+                <p class="card-text">
+                    <span class="h1">7518</span>
+
+                    <spna class="span">Completed Projects</spna>
+                </p>
+            </li>
+
+            <li>
+                <p class="card-text">
+                    <span class="h1">3472</span>
+
+                    <spna class="span">Happy Customers</spna>
+                </p>
+            </li>
+
+            <li>
+                <p class="card-text">
+                    <span class="h1">2184</span>
+
+                    <spna class="span">Expert Employees</spna>
+                </p>
+            </li>
+
+            <li>
+                <p class="card-text">
+                    <span class="h1">4523</span>
+
+                    <spna class="span">Awards Won</spna>
+                </p>
+            </li>
+
+        </ul>
+
+    </div>
+</section>
+
+
+
+
+
+<!--
+  - #PROJECT
+-->
+
+<section class="section project" aria-labelledby="project-label">
+    <div class="container">
+
+        <p class="section-subtitle" id="project-label">Case Studies</p>
+
+        <h2 class="h2 section-title">
+            Check out some of our awesome projects with creative ideas and great design.
+        </h2>
+
+        <ul class="grid-list">
+
+            <li>
+                <div class="project-card">
+
+                    <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
+                        <img src="./assets/images/blog-1.jpg" width="560" height="350" loading="lazy"
+                             alt="Ligula tristique quis risus" class="img-cover">
+                    </figure>
+
+                    <div class="card-content">
+
+                        <h3 class="h3">
+                            <a href="#" class="card-title">Ligula tristique quis risus</a>
+                        </h3>
+
+                        <p class="card-text">
+                            Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras
+                            imperdiet nun eu dolor.
+                        </p>
+
+                        <ul class="card-meta-list">
+
+                            <li class="card-meta-item">
+                                <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+
+                                <time class="meta-text" datetime="2022-04-14">14 Apr 2022</time>
+                            </li>
+
+                            <li class="card-meta-item">
+                                <ion-icon name="document-text-outline" aria-hidden="true"></ion-icon>
+
+                                <span class="meta-text">Coding</span>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+            </li>
+
+            <li>
+                <div class="project-card">
+
+                    <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
+                        <img src="./assets/images/blog-2.jpg" width="560" height="350" loading="lazy"
+                             alt="Nullam id dolor elit id nibh" class="img-cover">
+                    </figure>
+
+                    <div class="card-content">
+
+                        <h3 class="h3">
+                            <a href="#" class="card-title">Nullam id dolor elit id nibh</a>
+                        </h3>
+
+                        <p class="card-text">
+                            Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras
+                            imperdiet nun eu dolor.
+                        </p>
+
+                        <ul class="card-meta-list">
+
+                            <li class="card-meta-item">
+                                <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+
+                                <time class="meta-text" datetime="2022-03-29">29 Mar 2022</time>
+                            </li>
+
+                            <li class="card-meta-item">
+                                <ion-icon name="document-text-outline" aria-hidden="true"></ion-icon>
+
+                                <span class="meta-text">Workspace</span>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+            </li>
+
+            <li>
+                <div class="project-card">
+
+                    <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
+                        <img src="./assets/images/blog-3.jpg" width="560" height="350" loading="lazy"
+                             alt="Ultricies fusce porta elit" class="img-cover">
+                    </figure>
+
+                    <div class="card-content">
+
+                        <h3 class="h3">
+                            <a href="#" class="card-title">Ultricies fusce porta elit</a>
+                        </h3>
+
+                        <p class="card-text">
+                            Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras
+                            imperdiet nun eu dolor.
+                        </p>
+
+                        <ul class="card-meta-list">
+
+                            <li class="card-meta-item">
+                                <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+
+                                <time class="meta-text" datetime="2022-02-26">26 Feb 2022</time>
+                            </li>
+
+                            <li class="card-meta-item">
+                                <ion-icon name="document-text-outline" aria-hidden="true"></ion-icon>
+
+                                <span class="meta-text">Meeting</span>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+            </li>
+
+        </ul>
+
+    </div>
+</section>
+
+
+
+
+
+<!--
+  - #CTA
+-->
+
+<section class="cta" aria-label="call to action">
+    <div class="container">
+
+        <h2 class="h2 section-title">
+            Join our community by using our services and grow your business.
+        </h2>
+
+        <a href="#" class="btn btn-primary">Try it For Free</a>
+
+    </div>
+</section>
+
+@endsection
+
+{{--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -245,3 +651,4 @@
 <script src="{{ asset('assets/main/js/script.js') }}"></script>
 </body>
 </html>
+--}}
