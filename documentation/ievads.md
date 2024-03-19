@@ -8,3 +8,7 @@ Grāmatvedības automatizācijas tīmekļa vietne ar maksājumu funkciju ir aktu
 Salīdzinot ar esošajiem analogiem, pašlaik ir pieejamas vairākas grāmatvedības automatizācijas sistēmas, bet tomēr šī sistēma piedāvā vairākas priekšrocības salīdzinājumā ar esošajiem analogiem. Sistēma ir pilnībā automatizēta un tas nozīmē, ka lietotājiem nav nepieciešamas īpašas zināšanas vai prasmes, lai to izmantotu. Sistēma ir ļoti ērta lietošanā, intuitīva, viegli saprotama un efektīvi, kas ļauj lietotājiem ietaupīt laiku ar resursiem.
 
 Šīs sistēmas izmantošana ļaus lietotājiem gūt vairākus ieguvumus, tostarp tie ieguvumi var būt ievērojami, jo tie var palīdzēt lietotājiem palielināt savu peļņu un uzlabot savu biznesa darbību, ietaupīt laiku un resursus, uzlabot produktivitāti un efektivitāti, samazināt kļūdas risku un paaugstināt atskaišu precizitāti.  
+
+
+Šis sistēmas veids ir b2b - business to business risinājums ( var redzēt shematiski ).
+
