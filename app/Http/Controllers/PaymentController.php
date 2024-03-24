@@ -2,27 +2,31 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\InvoicePaymentRequest;
 use App\Models\Invoice;
-use App\Services\InvoiceService;
+use App\Services\StripeService;
+use DomainException;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Application;
-use Illuminate\Http\Request;
+use Illuminate\Http\RedirectResponse;
 
 class PaymentController extends Controller
 {
-    private InvoiceService $invoiceService;
+    private StripeService $stripeService;
 
     /**
-     * @param InvoiceService $invoiceService
+     * @param StripeService $stripeService
      */
-    public function __construct(InvoiceService $invoiceService)
+    public function __construct(StripeService $stripeService)
     {
-        $this->invoiceService = $invoiceService;
+        $this->stripeService = $stripeService;
     }
 
-    public function showPaymentForm(Invoice $invoice): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
+    /**
+     * @param Invoice $invoice
+     * @return \Illuminate\Contracts\Foundation\Application|Factory|View|Application
+     */
+    public function showPaymentForm(Invoice $invoice): Application|View|Factory|\Illuminate\Contracts\Foundation\Application
     {
         if ($invoice->paid) {
             return view('payment.invoice-paid', compact('invoice'));
@@ -31,14 +35,48 @@ class PaymentController extends Controller
         }
     }
 
-    public function executePayment(InvoicePaymentRequest $request, Invoice $invoice)
+    /**
+     * @param Invoice $invoice
+     * @return RedirectResponse
+     */
+    public function executePayment(Invoice $invoice): RedirectResponse
     {
         if ($invoice->paid) {
             return redirect()->route('payment.show-form', $invoice)
                 ->with('error', __('Invoice has been already paid'));
         }
 
-        $this->invoiceService->setPaid($invoice);
+        try {
+            $redirectUrl = $this->stripeService->getRedirectUrl($invoice);
+        } catch (DomainException $e) {
+            return redirect()->route('payment.show-form', $invoice)->with('error', $e->getMessage());
+        }
+
+        return redirect()->to($redirectUrl);
+    }
+
+    public function finish(Invoice $invoice)
+    {
+        try {
+            $this->stripeService->finalizeStripePayment($invoice);
+        } catch (DomainException $e) {
+            return redirect()->route('payment.show-form', $invoice)->with('error', $e->getMessage());
+        }
+
+        if (!$invoice->paid) {
+            return redirect()->route('payment.show-form', $invoice)
+                ->with('error', __('Payment is not accepted'));
+        }
+
+        return redirect()->route('payment.show-form', $invoice);
+    }
+
+    /**
+     * @param Invoice $invoice
+     * @return RedirectResponse
+     */
+    public function cancel(Invoice $invoice): RedirectResponse
+    {
         return redirect()->route('payment.show-form', $invoice);
     }
 }

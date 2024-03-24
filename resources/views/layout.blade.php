@@ -93,7 +93,7 @@
 
         </nav>
 
-        <a href="#" class="btn btn-primary">Admin panel</a>
+        <a href="http://localhost:8000/login" class="btn btn-primary">Admin panel</a>
 
         <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
         </button>

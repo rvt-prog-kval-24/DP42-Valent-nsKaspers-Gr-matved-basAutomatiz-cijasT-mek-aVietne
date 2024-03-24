@@ -1,19 +1,31 @@
-@extends("layout")
+@extends("layouts.app")
 
 @section('title') {{ __('Invoice Payment') }} @endsection
 
-@section("main_content")
+@section("content")
+    @if (session()->has('success'))
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="alert alert-success">
+                        {{ session()->get('success') }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="card bg-success">
+                <div class="card">
                     <div class="card-header text-uppercase">
-                        <strong>{{ __('Payment For Invoice') }}</strong>
+                        <strong>{{ sprintf(__('Payment For Invoice: %s'), $invoice->reference) }}</strong>
                     </div>
 
                     <div class="card-body">
-                        <div class="row mb-3">
-                            {{ sprintf(__('Invoice %s has already been paid!'), $invoice->reference) }}
+                        <div class="row mb-3 p-4">
+                            <h2 class="text-center">{{ __('Invoice has been paid!') }}</h2>
                         </div>
                     </div>
                 </div>

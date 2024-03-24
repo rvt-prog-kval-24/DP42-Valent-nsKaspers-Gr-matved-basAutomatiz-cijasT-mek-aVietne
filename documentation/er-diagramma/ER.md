@@ -1,7 +1,7 @@
-Sistēmas ER-modelis sastāv no 4 entitijām (skat er.png.), kas nodrošina pamatinformācijas uzglabāšanu un apstrādi. Tas ir Kompanijas, Ziņas, Adm/user, Kompanijas, Jautājumi.
+Sistēmas ER-modelis sastāv no entitijām (skat er.png.), kas nodrošina pamatinformācijas uzglabāšanu un apstrādi. Tas ir Kompanijas, Ziņas, Adm/user, Kompanijas, Jautājumi.
  
 6.att. ER diagramm
-Entitijam ziņas un Adm/user ir saišu “Many To Many”, jo katrs darbnieks var likt, rediģēt vai dzēst visas ziņas un pie katrai ziņai pieder vairāki darbnieki.
+Entitijam ziņas un Adm/user ir saišu “Many To Many”, jo katrs var likt, rediģēt vai dzēst visas ziņas un pie katrai ziņai pieder vairāki darbnieki.
 
 Kompānijas:
 Kompānijas glabā informāciju par uzņēmumiem, kas izmanto sistēmu. Katram uzņēmumam ir unikāls vat numurs, nosaukums, adrese, reg. numurs, tālrunis, e-pasts un apraksts.
@@ -14,3 +14,6 @@ Adm/user glabā informāciju par sistēmas administratoriem un lietotājiem. Kat
 
 Jautājumi:
 Jautājumi glabā informāciju par atsutītam jautājumiem. Administratoriem. Katram jautājumam ir e-pasts, no kura bija atsutīts jautājums un jautājuma saturs.
+
+Rēķins:
+Rēķins glabā informāciju par maksājumiem.

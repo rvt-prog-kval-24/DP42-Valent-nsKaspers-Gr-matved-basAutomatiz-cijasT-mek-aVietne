@@ -33,6 +33,8 @@ Route::get('/services',[MainController::class, 'services'])->name('services');
 
 Route::get('/payments/{invoice}',[PaymentController::class, 'showPaymentForm'])->name('payment.show-form');
 Route::post('/payments/{invoice}/execute',[PaymentController::class, 'executePayment'])->name('payment.execute');
+Route::any('/payments/{invoice}/finish',[PaymentController::class, 'finish'])->name('payment.finish');
+Route::any('/payments/{invoice}/cancel',[PaymentController::class, 'cancel'])->name('payment.cancel');
 
 /*Route::get('/Account_management',[MainController::class, 'Account_management'])->name('Account_management');
 
@@ -49,6 +51,7 @@ Route::group(['prefix' => '/admin', 'middleware' => 'auth', 'as' => 'admin.'], s
     Route::resource("posts", PostController::class)->except("show");
     Route::resource("invoices", InvoiceController::class);
     Route::resource('questions', QuestionController::class)->except('show', 'create', 'store');
+    Route::post('/invoices/{invoice}/send-email',[InvoiceController::class, 'sendEmail'])->name('invoices.send-email');
 });
 
 Auth::routes();

@@ -1,14 +1,36 @@
 ## Ievads
 
-Mūsdienās ir ļoti svarīgi izmantot automatizētas sistēmas, lai uzlabotu produktivitāti un efektivitāti. Šādas sistēmas ļauj ietaupīt laiku un resursus, kas var tikt izmantoti citām vajadzībām.
-Šī kvalifikācijas darba tēma ir grāmatvedības automatizācijas tīmekļa vietne ar maksājumu funkciju. Šī sistēma ir aktuāla, jo arvien vairāk cilvēku vēlas izmantot ērtus un mūsdienīgus risinājumus grāmatvedības automatizācijai. Maksājumu funkcija ļauj ietaupīt laiku un resursus, jo maksājumi var tikt veikti vienkārši un ātri, izmantojot vienu pogu.
-Sistēma ir paredzēta cilvēkiem, kuri vēlas automatizēt savu grāmatvedību un ērti veikt maksājumus. Bez šādas sistēmas grāmatvedības process var būt ļoti apgrūtināts un laikietilpīgs.
-Grāmatvedības automatizācijas tīmekļa vietne ar maksājumu funkciju ir aktuāla un nepieciešama sistēma, jo tā piedāvā vairākas priekšrocības salīdzinājumā ar esošajiem analogiem un var sniegt lietotājiem ievērojamus ieguvumus un vienkaršību.
-
-Salīdzinot ar esošajiem analogiem, pašlaik ir pieejamas vairākas grāmatvedības automatizācijas sistēmas, bet tomēr šī sistēma piedāvā vairākas priekšrocības salīdzinājumā ar esošajiem analogiem. Sistēma ir pilnībā automatizēta un tas nozīmē, ka lietotājiem nav nepieciešamas īpašas zināšanas vai prasmes, lai to izmantotu. Sistēma ir ļoti ērta lietošanā, intuitīva, viegli saprotama un efektīvi, kas ļauj lietotājiem ietaupīt laiku ar resursiem.
-
-Šīs sistēmas izmantošana ļaus lietotājiem gūt vairākus ieguvumus, tostarp tie ieguvumi var būt ievērojami, jo tie var palīdzēt lietotājiem palielināt savu peļņu un uzlabot savu biznesa darbību, ietaupīt laiku un resursus, uzlabot produktivitāti un efektivitāti, samazināt kļūdas risku un paaugstināt atskaišu precizitāti.  
+## Grāmatvedības automatizācijas tīmekļa vietne
 
 
-Šis sistēmas veids ir b2b - business to business risinājums ( var redzēt shematiski ).
+Mūsdienās automatizētas sistēmas ir kļuvušas par nozīmīgu instrumentu produktivitātes un efektivitātes celšanai. Šādas sistēmas ļauj ietaupīt laiku un resursus, kurus var novirzīt citām vajadzībām.
 
+Šī kvalifikācijas darba tēma ir grāmatvedības automatizācijas tīmekļa vietne. Šādas sistēmas aktualitāti nosaka pieaugošā pieprasījuma pēc ērtām un modernām grāmatvedības automatizācijas iespējām. Maksājumu funkcija ļauj ietaupīt laiku un resursus, veicot maksājumus vienkārši un ātri, izmantojot vienu pogu.
+
+
+Sistēmas mērķauditorija:
+
+Sistēma paredzēta cilvēkiem, kuri vēlas automatizēt savu grāmatvedību un ērti veikt maksājumus. Bez šādas sistēmas grāmatvedības process var būt apgrūtināts un laikietilpīgs.
+
+Sistēmas priekšrocības:
+
+Grāmatvedības automatizācijas tīmekļa vietne ir aktuāla un nepieciešama sistēma, jo tā piedāvā vairākas priekšrocības salīdzinājumā ar esošajiem analogiem un var sniegt lietotājiem ievērojamus ieguvumus, vienkāršību, un, salīdzinot, mana sistēma ir visma (horizon/hop) konkurents.
+
+
+Automatizācija:
+
+Sistēma ir automatizēta, kas nozīmē, ka lietotājiem nav nepieciešamas īpašas zināšanas vai prasmes, lai to izmantotu.
+Ērta lietošana: Sistēma ir ērta lietošanā, intuitīva, viegli saprotama un efektīva, kas ļauj lietotājiem ietaupīt laiku un resursus.
+Ieguvumi: Šīs sistēmas izmantošana ļauj lietotājiem gūt vairākus ieguvumus, tostarp:
+Palielināt peļņu un uzlabot biznesa darbību
+Ietaupīt laiku un resursus
+Uzlabot produktivitāti un efektivitāti
+Samazināt kļūdu risku
+Paaugstināt atskaišu precizitāti
+
+
+Grāmatvedības automatizācijas tīmekļa vietne ar maksājumu funkciju ir moderna un efektīva sistēma, kas var sniegt ievērojamus ieguvumus uzņēmumiem un privātpersonām. Šāda sistēma ļauj automatizēt grāmatvedības procesus, veikt maksājumus ātri un ērti, kā arī ietaupīt laiku un resursus.
+
+
+
+Sistēma ir B2B (business-to-business) risinājums ( var redzēt shematiski ).

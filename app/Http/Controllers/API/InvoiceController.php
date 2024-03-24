@@ -8,6 +8,8 @@ use App\Http\Requests\API\InvoiceCreateRequest;
 use App\Models\Company;
 use App\Models\Invoice;
 use App\Services\InvoiceService;
+use App\Services\MailSendingService;
+use DomainException;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
@@ -19,6 +21,11 @@ class InvoiceController extends Controller
     private InvoiceService $invoiceService;
 
     /**
+     * @var MailSendingService
+     */
+    private MailSendingService $mailSendingService;
+
+    /**
      * @var Company|null
      */
     private ?Company $company;
@@ -26,9 +33,10 @@ class InvoiceController extends Controller
     /**
      * @param InvoiceService $invoiceService
      */
-    public function __construct(InvoiceService $invoiceService)
+    public function __construct(InvoiceService $invoiceService, MailSendingService $mailSendingService)
     {
         $this->invoiceService = $invoiceService;
+        $this->mailSendingService = $mailSendingService;
         $this->company = $this->getCurrentCompany();
     }
 
@@ -48,7 +56,10 @@ class InvoiceController extends Controller
         $data = $request->validated();
         $data['company_id'] = $this->company?->id;
 
-        return  $this->invoiceService->store($data);
+        $result = $this->invoiceService->store($data);
+        $this->mailSendingService->sendUnpaidInvoiceMessage($result);
+
+        return $result;
     }
 
     /**
@@ -73,7 +84,7 @@ class InvoiceController extends Controller
         ])->first();
 
         if (!$invoice) {
-            return response(status: 404)->json(['message' => __('Provided invoice id is wrong!')]);
+            return response()->json(['message' => __('Provided invoice id is wrong!')],404);
         }
 
         $data = $request->validated();

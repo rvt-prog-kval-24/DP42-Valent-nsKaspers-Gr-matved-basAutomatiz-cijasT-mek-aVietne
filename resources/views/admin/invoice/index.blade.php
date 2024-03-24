@@ -25,6 +25,7 @@
                                         <th>{{ __('Reference') }}</th>
                                         <th>{{ __('Provider Name') }}</th>
                                         <th>{{ __('Client Name') }}</th>
+                                        <th>{{ __('Paid') }}</th>
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -34,6 +35,7 @@
                                             <td class="align-middle">{{ $invoice->reference }}</td>
                                             <td class="align-middle">{{ $invoice->provider_name }}</td>
                                             <td class="align-middle">{{ $invoice->client_name }}</td>
+                                            <td class="align-middle text-center">{{ $invoice->paid ? '+' : '-' }}</td>
                                             <td class="text-center">
                                                 <div class="btn-group">
                                                     <a class="btn btn-primary btn-sm" href="{{ route('admin.invoices.edit', $invoice) }}">
@@ -53,6 +55,18 @@
                                                                 <button class="dropdown-item">{{ __('Delete') }}</button>
                                                             </form>
                                                         </li>
+                                                        @if (!$invoice->paid)
+                                                            <li>
+                                                                <a class="dropdown-item" target="_blank" href="{{ route('payment.show-form', $invoice) }}">{{ __('Payment Form') }}</a>
+                                                            </li>
+                                                            <li>
+                                                                <form action="{{ route('admin.invoices.send-email', $invoice) }}" method="POST">
+                                                                    @csrf
+                                                                    @method('POST')
+                                                                    <button class="dropdown-item">{{ __('Send Email') }}</button>
+                                                                </form>
+                                                            </li>
+                                                        @endif
                                                     </ul>
                                                 </div>
                                             </td>

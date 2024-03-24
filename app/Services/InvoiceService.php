@@ -134,4 +134,9 @@ class InvoiceService
     {
         $invoice->update(['paid' => true]);
     }
+
+    public function setPaidWithTransaction(Invoice $invoice, string $transaction): void
+    {
+        $invoice->update(['paid' => true]);
+    }
 }

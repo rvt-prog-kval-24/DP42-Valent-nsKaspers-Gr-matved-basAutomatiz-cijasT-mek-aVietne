@@ -19,9 +19,7 @@ class APIAuthorizationMiddleware
         $apiCode = trim($request->header('X-API-Code'));
 
         if ($apiCode === '' || Company::where('api_code', $apiCode)->count() === 0) {
-            return response(status: 401)->json([
-                'message' => __('Wrong or empty X-API-Code has been provided.')
-            ]);
+            return response()->json(['error' => __('Wrong or empty X-API-Code has been provided.')],401);
         }
 
         return $next($request);

@@ -9,6 +9,8 @@ use App\Models\Company;
 use App\Models\Invoice;
 use App\Models\User;
 use App\Services\InvoiceService;
+use App\Services\MailSendingService;
+use DomainException;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Contracts\View\Factory;
@@ -24,11 +26,18 @@ class InvoiceController extends Controller
     private InvoiceService $invoiceService;
 
     /**
-     * @param InvoiceService $invoiceService
+     * @var MailSendingService
      */
-    public function __construct(InvoiceService $invoiceService)
+    private MailSendingService $mailSendingService;
+
+    /**
+     * @param InvoiceService $invoiceService
+     * @param MailSendingService $mailSendingService
+     */
+    public function __construct(InvoiceService $invoiceService, MailSendingService $mailSendingService)
     {
         $this->invoiceService = $invoiceService;
+        $this->mailSendingService = $mailSendingService;
     }
 
     /**
@@ -117,5 +126,16 @@ class InvoiceController extends Controller
     public function show(Invoice $invoice): Response|Application|ResponseFactory
     {
         return response($this->invoiceService->show($invoice))->header('Content-Type', 'application/pdf');
+    }
+
+    public function sendEmail(Invoice $invoice): RedirectResponse
+    {
+        try {
+            $this->mailSendingService->sendUnpaidInvoiceMessage($invoice);
+        } catch (DomainException $e) {
+            return redirect()->back()->with('error', $e->getMessage());
+        }
+
+        return redirect()->back()->with('success', __('Email has been sent successfully.'));
     }
 }
