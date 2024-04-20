@@ -15,7 +15,7 @@
     <!--
       - favicon
     -->
-    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="{{ asset('favicon.svg') }}" type="image/svg+xml">
 
     <!--
       - google font link
@@ -27,15 +27,15 @@
     <!--
       - custom css link
     -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
     <!--
       - preload images
     -->
-    <link rel="preload" as="image" href="./assets/images/hero-bg.jpg">
-    <link rel="preload" as="image" href="./assets/images/hero-slide-1.jpg">
-    <link rel="preload" as="image" href="./assets/images/hero-slide-2.jpg">
-    <link rel="preload" as="image" href="./assets/images/hero-slide-3.jpg">
+    <link rel="preload" as="image" href="{{ asset('assets/images/hero-bg.jpg') }}">
+    <link rel="preload" as="image" href="{{ asset('assets/images/hero-slide-1.jpg') }}">
+    <link rel="preload" as="image" href="{{ asset('assets/images/hero-slide-2.jpg') }}">
+    <link rel="preload" as="image" href="{{ asset('assets/images/hero-slide-3.jpg') }}">
 
 </head>
 
@@ -49,16 +49,16 @@
     <div class="container">
 
         <a href="#" class="logo">
-            <img src="./assets/images/logo-light.svg" width="74" height="24" alt="" class="logo-light">
+            <img src="{{ asset('assets/images/logo-light.svg') }}" width="74" height="24" alt="" class="logo-light">
 
-            <img src="./assets/images/logo-dark.svg" width="74" height="24" alt="" class="logo-dark">
+            <img src="{{ asset('assets/images/logo-dark.svg') }}" width="74" height="24" alt="" class="logo-dark">
         </a>
 
         <nav class="navbar" data-navbar>
 
             <div class="navbar-top">
                 <a href="#" class="logo">
-                    <img src="./assets/images/logo-light.svg" width="74" height="24" alt="">
+                    <img src="{{ asset('assets/images/logo-light.svg') }}" width="74" height="24" alt="">
                 </a>
 
             </div>
@@ -74,15 +74,11 @@
                 </li>
 
                 <li>
-                    <a href="#" class="navbar-link">Blog</a>
+                    <a href="{{ route('blog.index') }}" class="navbar-link">Blog</a>
                 </li>
 
                 <li>
-                    <a href="#" class="navbar-link">Contacts</a>
-                </li>
-
-                <li>
-                    <a href="#" class="navbar-link">Questions</a>
+                    <a href="{{ route('contacts.index') }}" class="navbar-link">Questions</a>
                 </li>
 
                 <li>
@@ -93,7 +89,7 @@
 
         </nav>
 
-        <a href="http://localhost:8000/login" class="btn btn-primary">Admin panel</a>
+        <a href="{{ route('login') }}" class="btn btn-primary">Admin panel</a>
 
         <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
         </button>
@@ -115,7 +111,7 @@
         -->
 
         <section class="section hero has-bg-image" aria-label="home"
-                 style="background-image: url('./assets/images/hero-bg.jpg')">
+                 style="background-image: url('{{ asset('assets/images/hero-bg.jpg') }}')">
             <div class="container">
 
                 <div class="hero-content">
@@ -144,7 +140,7 @@
                             <li class="slider-item">
 
                                 <figure class="img-holder" style="--width: 575; --height: 550;">
-                                    <img src="./assets/images/hero-slide-1.jpg" width="575" height="550" alt="" class="img-cover">
+                                    <img src="{{ asset('assets/images/hero-slide-1.jpg') }}" width="575" height="550" alt="" class="img-cover">
                                 </figure>
 
                             </li>
@@ -153,7 +149,7 @@
 
                                 <div class="hero-card">
                                     <figure class="img-holder" style="--width: 575; --height: 550;">
-                                        <img src="./assets/images/hero-slide-2.jpg" width="575" height="550" alt="hero banner"
+                                        <img src="{{ asset('assets/images/hero-slide-2.jpg') }}" width="575" height="550" alt="hero banner"
                                              class="img-cover">
                                     </figure>
                                 </div>
@@ -163,7 +159,7 @@
                             <li class="slider-item">
 
                                 <figure class="img-holder" style="--width: 575; --height: 550;">
-                                    <img src="./assets/images/hero-slide-3.jpg" width="575" height="550" alt="" class="img-cover">
+                                    <img src="{{ asset('assets/images/hero-slide-3.jpg') }}" width="575" height="550" alt="" class="img-cover">
                                 </figure>
 
                             </li>
@@ -201,46 +197,12 @@
         <div class="footer-brand">
 
             <a href="#" class="logo">
-                <img src="./assets/images/logo-light.svg" width="74" height="24" alt="Adex home">
+                <img src="{{ asset('assets/images/logo-light.svg') }}" width="74" height="24" alt="">
             </a>
 
             <p class="footer-text">
                 &copy; 2022 codewithsadee. <br> All rights reserved.
             </p>
-
-            <ul class="social-list">
-
-                <li>
-                    <a href="#" class="social-link">
-                        <ion-icon name="logo-facebook"></ion-icon>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#" class="social-link">
-                        <ion-icon name="logo-twitter"></ion-icon>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#" class="social-link">
-                        <ion-icon name="logo-dribbble"></ion-icon>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#" class="social-link">
-                        <ion-icon name="logo-instagram"></ion-icon>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#" class="social-link">
-                        <ion-icon name="logo-youtube"></ion-icon>
-                    </a>
-                </li>
-
-            </ul>
 
         </div>
 
@@ -314,7 +276,7 @@
 </footer>
 
 
-<script src="./assets/js/script.js"></script>
+<script src="{{ asset('assets/js/script.js') }}"></script>
 
 
 </body>

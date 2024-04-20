@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('main_content')
+@section('content')
 
     <form action="{{ route('contacts.submit') }}" method="POST">
         @csrf
@@ -31,7 +31,7 @@
                         </div>
                         <div class="card-body">
                             <div class="row mb-3">
-                                <label for="email" class="col-lg-3 col-form-label text-md-end">{{ __('Email') }}<span class="text-danger">*</span></label>
+                                <label for="email" class="col-lg-3 col-form-label text-md-end">{{ __('Email') }}<span class="text-danger"></span></label>
                                 <div class="col-lg-6">
                                     <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="off">
                                     @error('email')
@@ -43,7 +43,7 @@
                             </div>
 
                             <div class="row mb-3">
-                                <label for="question_text" class="col-lg-3 col-form-label text-md-end">{{ __('Question') }}<span class="text-danger">*</span></label>
+                                <label for="question_text" class="col-lg-3 col-form-label text-md-end">{{ __('Question') }}<span class="text-danger"></span></label>
                                 <div class="col-lg-6">
                                     <textarea id="question_text" class="form-control @error('question_text') is-invalid @enderror" name="question_text">{{ old('question_text') }}</textarea>
                                     @error('question_text')
@@ -63,5 +63,51 @@
                 </div>
             </div>
         </div>
+
+        <style>
+            .container {
+                max-width: 960px;
+                margin: 0 auto;
+                padding: 15px;
+            }
+
+            .card {
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                transition: 0.3s;
+                border-radius: 5px;
+            }
+
+            .card:hover {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            }
+
+            .card-header {
+                background-color: #f1f1f1;
+                padding: 10px;
+                text-align: center;
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            .card-body {
+                padding: 10px;
+            }
+
+            .btn-primary {
+                background-color: #9d44e5;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 6px 3px;
+                cursor: pointer;
+            }
+
+        </style>
+
+
     </form>
 @endsection

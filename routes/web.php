@@ -51,6 +51,7 @@ Route::group(['prefix' => '/admin', 'middleware' => 'auth', 'as' => 'admin.'], s
     Route::resource("posts", PostController::class)->except("show");
     Route::resource("invoices", InvoiceController::class);
     Route::resource('questions', QuestionController::class)->except('show', 'create', 'store');
+    Route::post('/questions/{question}/response',[QuestionController::class, 'response'])->name('questions.response');
     Route::post('/invoices/{invoice}/send-email',[InvoiceController::class, 'sendEmail'])->name('invoices.send-email');
 });
 

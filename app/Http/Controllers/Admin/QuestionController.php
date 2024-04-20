@@ -3,13 +3,17 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\Question\QuestionResponseRequest;
 use App\Http\Requests\Admin\Question\QuestionUpdateRequest;
+use App\Mail\QuestionResponseMail;
 use App\Models\Question;
 use App\Services\QuestionService;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Mail;
+
 
 class QuestionController extends Controller
 {
@@ -77,4 +81,17 @@ class QuestionController extends Controller
         return redirect()->route('admin.questions.index')
             ->with('success', __('Question deleted successfully.'));
     }
+
+
+    public function response( Question $question, QuestionResponseRequest $request): RedirectResponse
+    {
+        $response = $request->validated("response");
+        Mail::to($question->email)
+            ->send(new QuestionResponseMail($question, $response));
+
+        return redirect()->back()
+            ->with('success', __('Question answered successfully.'));
+    }
+
+
 }

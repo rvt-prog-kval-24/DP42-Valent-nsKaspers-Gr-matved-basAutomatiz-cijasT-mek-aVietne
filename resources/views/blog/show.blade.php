@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('main_content')
+@section('content')
 
     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
         <ol class="breadcrumb">

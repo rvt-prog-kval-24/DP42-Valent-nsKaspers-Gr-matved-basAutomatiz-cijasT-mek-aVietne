@@ -68,4 +68,49 @@
             </div>
         </div>
     </form>
+
+
+
+
+    <hr>
+
+    <form action="{{ route('admin.questions.response', $question) }}" enctype="multipart/form-data" method="POST">
+        @csrf
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header text-uppercase">
+                            <div class="row">
+                                <div class="col-lg-6 d-flex align-items-center">
+                                    <strong>{{ __('Send response') }}</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row mb-3">
+                                <label for="response" class="col-lg-3 col-form-label text-md-end">{{ __('Response') }}<span class="text-danger">*</span></label>
+                                <div class="col-lg-6">
+                                    <textarea id="response" class="form-control @error('response') is-invalid @enderror" name="response">{{ old("response") }}</textarea>
+                                    @error('response')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-end">
+                            <button type="submit" class="btn btn-primary text-uppercase">
+                                {{ __('Send') }}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+
 @endsection
