@@ -1,47 +1,34 @@
-@extends('layout')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset password</title>
+    <link rel="stylesheet" href="{{asset("login-assets/styles.css")}}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<div class="wrapper">
+    <form method="POST" action="{{ route('password.email') }}">
+        @csrf
+        <h1>Reset password</h1>
+        <div class="input-box">
+            <input type="text" name="email" placeholder="Email" required>
+            <i class='bx bxs-user'></i>
 
-@section('main_content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
+            @error('email')
+            <strong>{{ $message }}</strong>
+            @enderror
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    <form method="POST" action="{{ route('password.email') }}">
-                        @csrf
-
-                        <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Send Password Reset Link') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
         </div>
-    </div>
+        <button type="submit" class="btn">Send Password Reset Link</button>
+
+
+        <div class="main-link">
+            <p>Return to <a href="{{route("main")}}">main page</a></p>
+        </div>
+
+    </form>
 </div>
-@endsection
+</body>
+</html>
