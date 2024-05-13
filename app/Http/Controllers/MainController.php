@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Application;
@@ -11,7 +12,9 @@ class MainController extends Controller{
 
     public function main(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
     {
-        return view('main');
+        $posts = Post::orderBy('id', 'desc')->where('active', true)->with('user')->paginate(9);
+
+        return view('main', compact('posts'));
     }
 
     public function about(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application

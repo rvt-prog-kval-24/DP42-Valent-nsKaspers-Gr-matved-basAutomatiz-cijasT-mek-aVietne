@@ -10,8 +10,7 @@
       - primary meta tags
     -->
     <title>EuroCipari</title>
-    <meta name="title" content="EuroCipari">
-    <meta name="description" content="This is a business agency html template made by codewithsadee">
+    <meta name="EuroCipari" content="Business System">
 
     <!--
       - favicon
@@ -36,6 +35,7 @@
     <link rel="preload" as="image" href="{{ asset('assets/images/hero-bg.jpg') }}">
     <link rel="preload" as="image" href="{{ asset('assets/images/hero-slide-1.jpg') }}">
     <link rel="preload" as="image" href="{{ asset('assets/images/hero-slide-2.jpg') }}">
+    <link rel="preload" as="image" href="{{ asset('assets/images/hero-slide-3.jpg') }}">
 
 </head>
 
@@ -48,39 +48,50 @@
 <header class="header" data-header>
     <div class="container">
 
-        <a href="{{ route( 'main' ) }}" class="logo">
-            <img src="{{ asset('assets/images/logo.png') }}" width="74" height="24" alt="EuroCipari" class="logo-light">
+        <a href="#" class="logo">
+            <img src="{{ asset('assets/images/logo-light.svg') }}" width="74" height="24" alt="" class="logo-light">
+
+            <img src="{{ asset('assets/images/logo-dark.svg') }}" width="74" height="24" alt="" class="logo-dark">
         </a>
 
         <nav class="navbar" data-navbar>
 
             <div class="navbar-top">
                 <a href="#" class="logo">
-                    <img src="{{ asset('assets/images/logo.png') }}" width="74" height="24" alt="Adex home">
+                    <img src="{{ asset('assets/images/logo-light.svg') }}" width="74" height="24" alt="">
                 </a>
 
-                <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
-                    <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
-                </button>
             </div>
 
             <ul class="navbar-list">
 
+                <li>
+                    <a href="#" class="navbar-link">Home</a>
+                </li>
 
+                <li>
+                    <a href="#" class="navbar-link">About</a>
+                </li>
+
+                <li>
+                    <a href="{{ route('blog.index') }}" class="navbar-link">Blog</a>
+                </li>
 
                 <li>
                     <a href="{{ route('contacts.index') }}" class="navbar-link">Questions</a>
                 </li>
 
-            </ul>
+                <li>
+                    <a href="#" class="navbar-link">Bills and payment</a>
+                </li>
 
+            </ul>
 
         </nav>
 
         <a href="{{ route('login') }}" class="btn btn-primary">Admin panel</a>
 
         <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
-            <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
         </button>
 
         <div class="overlay" data-nav-toggler data-overlay></div>
@@ -100,16 +111,24 @@
         -->
 
         <section class="section hero has-bg-image" aria-label="home"
-                 style="background-image: url({{ asset('assets/images/hero-bg.jpg') }}">
+                 style="background-image: url('{{ asset('assets/images/hero-bg.jpg') }}')">
             <div class="container">
 
                 <div class="hero-content">
 
-                    <h1 class="h1 hero-title">Tailored solutions with professionalism.</h1>
+                    <h1 class="h1 hero-title">Crafting project specific solutions with expertise.</h1>
 
                     <p class="hero-text">
-                        We are a creative company that values long-term relationships with clients.
+                        We’re a creative company that focuses on establishing long-term relationships with customers.
                     </p>
+
+                    <div class="btn-wrapper">
+
+                        <a href="#" class="btn btn-primary">Explore Now</a>
+
+                        <a href="#" class="btn btn-outline">Contact Us</a>
+
+                    </div>
 
                 </div>
 
@@ -133,8 +152,15 @@
                                         <img src="{{ asset('assets/images/hero-slide-2.jpg') }}" width="575" height="550" alt="hero banner"
                                              class="img-cover">
                                     </figure>
-
                                 </div>
+
+                            </li>
+
+                            <li class="slider-item">
+
+                                <figure class="img-holder" style="--width: 575; --height: 550;">
+                                    <img src="{{ asset('assets/images/hero-slide-3.jpg') }}" width="575" height="550" alt="" class="img-cover">
+                                </figure>
 
                             </li>
 
@@ -142,11 +168,9 @@
                     </div>
 
                     <button class="slider-btn prev" aria-label="slide to previous" data-slider-prev>
-                        <ion-icon name="arrow-back"></ion-icon>
                     </button>
 
                     <button class="slider-btn next" aria-label="slide to next" data-slider-next>
-                        <ion-icon name="arrow-forward"></ion-icon>
                     </button>
 
                 </div>
@@ -154,25 +178,7 @@
             </div>
         </section>
 
-
-
-
         @yield('content')
-
-
-        <!--
-          - #CTA
-        -->
-
-        <section class="cta" aria-label="call to action">
-            <div class="container">
-
-                <h2 class="h2 section-title">
-                    Using our services and grow your business.
-                </h2>
-
-            </div>
-        </section>
 
     </article>
 </main>
@@ -190,10 +196,79 @@
 
         <div class="footer-brand">
 
+            <a href="#" class="logo">
+                <img src="{{ asset('assets/images/logo-light.svg') }}" width="74" height="24" alt="">
+            </a>
 
             <p class="footer-text">
-                &copy; 2023 EuroCipari. <br> All rights reserved.
+                &copy; 2022 codewithsadee. <br> All rights reserved.
             </p>
+
+        </div>
+
+        <ul class="footer-list">
+
+            <li>
+                <p class="h4 footer-list-title">Get in Touch</p>
+            </li>
+
+            <li>
+                <address class="footer-text">
+                    Moonshine St. 14/05 Light City, London, United Kingdom
+                </address>
+            </li>
+
+            <li>
+                <a href="mailto:info@email.com" class="footer-link">info@email.com</a>
+            </li>
+
+            <li>
+                <a href="tel:001234567890" class="footer-link">00 (123) 456 78 90</a>
+            </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+            <li>
+                <p class="h4 footer-list-title">Learn More</p>
+            </li>
+
+            <li>
+                <a href="#" class="footer-link">About Us</a>
+            </li>
+
+            <li>
+                <a href="#" class="footer-link">Our Story</a>
+            </li>
+
+            <li>
+                <a href="#" class="footer-link">Projects</a>
+            </li>
+
+            <li>
+                <a href="#" class="footer-link">Terms of Use</a>
+            </li>
+
+            <li>
+                <a href="#" class="footer-link">Privacy Policy</a>
+            </li>
+
+        </ul>
+
+        <div class="footer-list">
+
+            <p class="h4 footer-list-title">Our Newsletter</p>
+
+            <p class="footer-text">
+                Subscribe to our newsletter to get our news & deals delivered to you.
+            </p>
+
+            <form action="" class="input-wrapper">
+                <input type="email" name="email_address" placeholder="Email Address" required class="input-field">
+
+                <button type="submit" class="submit-btn">Join</button>
+            </form>
 
         </div>
 
@@ -201,19 +276,8 @@
 </footer>
 
 
-
-
-
-<!--
-  - custom js link
--->
 <script src="{{ asset('assets/js/script.js') }}"></script>
 
-<!--
-  - ionicon
--->
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 

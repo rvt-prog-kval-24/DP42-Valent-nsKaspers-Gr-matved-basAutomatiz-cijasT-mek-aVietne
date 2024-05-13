@@ -14,7 +14,8 @@
 
                                     <p class="card-text mb-auto text-start mb-2">{{ Str::limit(strip_tags($post->text), 100) }}</p>
 
-                                    <a href="{{ route('blog.show', $post) }}" class="btn btn-primary btn-sm">{{ __('Read More') }}</a>
+                                    <a href="{{ route('blog.show', $post) }}"
+                                       class="btn btn-primary btn-sm">{{ __('Read More') }}</a>
                                 </div>
                                 <div class="card-footer text-muted">
                                     {{ $post->created_at }}

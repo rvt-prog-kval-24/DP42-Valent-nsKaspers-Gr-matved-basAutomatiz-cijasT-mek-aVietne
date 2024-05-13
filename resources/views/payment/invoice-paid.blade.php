@@ -1,4 +1,4 @@
-@extends("layouts.app")
+@extends("layout")
 
 @section('title') {{ __('Invoice Payment') }} @endsection
 
@@ -15,10 +15,10 @@
         </div>
     @endif
 
-    <div class="container">
+    <div class="container" style="text-align: center;">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="card">
+                <div class="card" style="margin: 50px">
                     <div class="card-header text-uppercase">
                         <strong>{{ sprintf(__('Payment For Invoice: %s'), $invoice->reference) }}</strong>
                     </div>

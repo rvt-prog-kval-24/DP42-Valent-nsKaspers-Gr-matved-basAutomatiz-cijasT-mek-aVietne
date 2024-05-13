@@ -63,7 +63,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 Route::controller(BlogController::class)->group(function () {
-    Route::get('/posts', 'index')->name('blog.index');
     Route::get('/posts/{post}', 'show')->name('blog.show');
 });
 

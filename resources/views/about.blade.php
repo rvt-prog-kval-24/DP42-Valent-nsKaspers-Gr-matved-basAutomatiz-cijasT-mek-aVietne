@@ -1,6 +1,8 @@
 @extends("layout")
 
-@section('title') About @endsection
+@section('title')
+    About
+@endsection
 
 @section("content")
     <!--
@@ -37,8 +39,10 @@
                             </h3>
 
                             <p class="accordion-content">
-                                Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
-                                sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna,
+                                Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
+                                massa justo
+                                sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo
+                                cursus magna,
                                 vel.
                             </p>
 
@@ -57,8 +61,10 @@
                             </h3>
 
                             <p class="accordion-content">
-                                Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
-                                sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna,
+                                Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
+                                massa justo
+                                sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo
+                                cursus magna,
                                 vel.
                             </p>
 
@@ -77,8 +83,10 @@
                             </h3>
 
                             <p class="accordion-content">
-                                Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
-                                sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna,
+                                Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
+                                massa justo
+                                sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo
+                                cursus magna,
                                 vel.
                             </p>
 

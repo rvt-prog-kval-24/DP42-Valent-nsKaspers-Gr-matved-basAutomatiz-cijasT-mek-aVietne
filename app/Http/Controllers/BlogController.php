@@ -10,16 +10,6 @@ use Illuminate\Contracts\View\View;
 class BlogController extends Controller
 {
     /**
-     * @return Factory|View|Application
-     */
-    public function index(): Factory|View|Application
-    {
-        $posts = Post::orderBy('id', 'desc')->where('active', true)->with('user')->paginate(9);
-
-        return view('blog.index', compact('posts'));
-    }
-
-    /**
      * @param Post $post
      * @return Factory|View|Application
      */
