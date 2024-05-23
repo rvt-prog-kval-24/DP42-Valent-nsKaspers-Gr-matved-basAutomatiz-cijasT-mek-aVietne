@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Company;
+use App\Models\Invoice;
 use App\Models\Post;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -14,7 +16,10 @@ class MainController extends Controller{
     {
         $posts = Post::orderBy('id', 'desc')->where('active', true)->with('user')->paginate(9);
 
-        return view('main', compact('posts'));
+        $companiesQuantity = Company::all()->count();
+        $paymentsQuantity = Invoice::where('paid', true)->count();
+
+        return view('main', compact('posts', 'companiesQuantity', 'paymentsQuantity'));
     }
 
     public function about(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application

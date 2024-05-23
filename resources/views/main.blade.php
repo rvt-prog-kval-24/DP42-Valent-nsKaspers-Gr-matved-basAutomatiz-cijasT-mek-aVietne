@@ -267,7 +267,7 @@
 
                 <li>
                     <p class="card-text">
-                        <span class="h1">4465</span>
+                        <span class="h1">{{$paymentsQuantity}}</span>
 
                         <spna class="span">Processed Payments</spna>
                     </p>
@@ -275,7 +275,7 @@
 
                 <li>
                     <p class="card-text">
-                        <span class="h1">13</span>
+                        <span class="h1">{{$companiesQuantity}}</span>
 
                         <spna class="span">companies chose us</spna>
                     </p>
@@ -293,128 +293,6 @@
     <!--
       - #PROJECT
     -->
-
-    <section class="section project" aria-labelledby="project-label">
-        <div class="container">
-
-            <p class="section-subtitle" id="project-label">CASES</p>
-
-            <h2 class="h2 section-title">
-                Check out some of our successful projects that demonstrate how our automation system can be tailored to different types of businesses.
-            </h2>
-
-            <ul class="grid-list">
-
-                <li>
-                    <div class="project-card">
-
-                        <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
-                            <img src="{{ asset('assets/images/blog-1.jpg') }}" width="560" height="350" loading="lazy"
-                                 alt="Nullam id dolor elit id nibh" class="img-cover">
-                        </figure>
-
-                        <div class="card-content">
-
-                            <h3 class="h3">
-                                <a href="#" class="card-title">For retail chains</a>
-                            </h3>
-
-                            <p class="card-text">
-                                The retail chain chose our system to automate payments for food products. Thanks to this, the company was able to optimize its inventory management process and improve customer service.
-                            </p>
-
-                            <ul class="card-meta-list">
-
-                                <li class="card-meta-item">
-                                    <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
-
-                                    <time class="meta-text" datetime="2022-03-29">1 Sep 2018</time>
-                                </li>
-
-                            </ul>
-
-                        </div>
-
-                    </div>
-                </li>
-
-                <li>
-                    <div class="project-card">
-
-                        <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
-                            <img src="{{ asset('assets/images/blog-2.jpg') }}" width="560" height="350" loading="lazy"
-                                 alt="Ultricies fusce porta elit" class="img-cover">
-                        </figure>
-
-                        <div class="card-content">
-
-                            <h3 class="h3">
-                                <a href="#" class="card-title">For manufacturing companies</a>
-                            </h3>
-
-                            <p class="card-text">
-                                Our automation system has been successfully implemented in the Manufacturing Company. We automated the process of paying for materials, which significantly increased production efficiency.
-                            </p>
-
-                            <ul class="card-meta-list">
-
-                                <li class="card-meta-item">
-                                    <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
-
-                                    <time class="meta-text" datetime="2022-02-26">26 Feb 2020</time>
-                                </li>
-
-                            </ul>
-
-                            <ul class="card-meta-list">
-
-
-                            </ul>
-
-                        </div>
-
-                    </div>
-                </li>
-
-                <li>
-                    <div class="project-card">
-
-                        <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
-                            <img src="{{ asset('assets/images/blog-3.jpg') }}" width="560" height="350" loading="lazy"
-                                 alt="Ultricies fusce porta elit" class="img-cover">
-                        </figure>
-
-                        <div class="card-content">
-
-                            <h3 class="h3">
-                                <a href="#" class="card-title">For IT companies</a>
-                            </h3>
-
-                            <p class="card-text">
-                                For IT companies, “IT-Company 3” used our system to automate the payment of employee invoices. This helped the company increase productivity and focus on developing innovative products.
-                            </p>
-
-                            <ul class="card-meta-list">
-
-                                <li class="card-meta-item">
-                                    <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
-
-                                    <time class="meta-text" datetime="2022-02-26">03 Feb 2024</time>
-                                </li>
-
-
-                            </ul>
-
-                        </div>
-
-                    </div>
-                </li>
-
-            </ul>
-
-        </div>
-    </section>
-
 
     <section class="section project" aria-labelledby="project-label">
         <div class="container">

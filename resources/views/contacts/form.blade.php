@@ -156,15 +156,20 @@
         </div>
         <div class="input-box">
             <textarea name="question_text" placeholder="Question" required></textarea>
-            <i class='bx bx-question-mark'></i>
 
             @error('question_text')
                 <strong>{{ $message }}</strong>
             @enderror
 
         </div>
+        <div style="clear:both"></div>
         <button type="submit" class="btn">Send</button>
     </form>
+
+    <div class="main-link">
+        <p>Return to <a href="{{route("main")}}">main page</a></p>
+    </div>
+
 </div>
 </body>
 </html>

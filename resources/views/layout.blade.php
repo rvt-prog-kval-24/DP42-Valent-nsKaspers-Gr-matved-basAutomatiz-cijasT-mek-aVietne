@@ -77,7 +77,7 @@
 
         </nav>
 
-        <a href="{{ route('login') }}" class="btn btn-primary">Admin panel</a>
+        <a href="{{ route('companies.login') }}" class="btn btn-primary">Companies panel</a>
 
         <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
             <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
