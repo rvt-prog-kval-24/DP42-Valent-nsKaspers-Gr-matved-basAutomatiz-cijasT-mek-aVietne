@@ -71,6 +71,18 @@
                             </div>
 
                             <div class="row mb-3">
+                                <label for="password" class="col-lg-3 col-form-label text-md-end">{{ __('Password') }}</label>
+                                <div class="col-lg-6">
+                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" value="" autocomplete="off">
+                                    @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
                                 <label for="phone" class="col-lg-3 col-form-label text-md-end">{{ __('Phone') }}<span class="text-danger">*</span></label>
                                 <div class="col-lg-6">
                                     <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone', $company->phone) }}" autocomplete="off">

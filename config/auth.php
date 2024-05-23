@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Company;
+
 return [
 
     /*
@@ -40,6 +42,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'company' => [
+            'driver' => 'session',
+            'provider' => 'companies',
+        ],
     ],
 
     /*
@@ -63,6 +69,10 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+        'companies' => [
+            'driver' => 'eloquent',
+            'model' => Company::class,
         ],
 
         // 'users' => [
@@ -94,6 +104,12 @@ return [
         'users' => [
             'provider' => 'users',
             'table' => 'password_reset_tokens',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'companies' => [
+            'provider' => 'companies',
+            'table' => 'companies_password_reset_tokens',
             'expire' => 60,
             'throttle' => 60,
         ],

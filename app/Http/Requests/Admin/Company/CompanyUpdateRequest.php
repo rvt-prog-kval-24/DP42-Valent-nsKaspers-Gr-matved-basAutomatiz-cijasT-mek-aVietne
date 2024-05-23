@@ -32,6 +32,7 @@ class CompanyUpdateRequest extends FormRequest
             'phone' => 'required|string|min:3|max:255|unique:companies,phone,' . $companyId ,
             'description' => 'nullable|string|max:9999',
             'api_code' => 'nullable|string|max:9999',
+            'password' => 'nullable|string|min:8|max:100',
         ];
     }
 }

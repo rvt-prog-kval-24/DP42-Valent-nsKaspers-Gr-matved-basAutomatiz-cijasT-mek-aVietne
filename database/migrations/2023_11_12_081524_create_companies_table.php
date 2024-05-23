@@ -21,6 +21,8 @@ return new class extends Migration
             $table->string('email', 255)->unique();
             $table->string('phone', 255)->unique();
             $table->string('api_code')->nullable();
+            $table->string('password', 255);
+            $table->rememberToken();
             $table->timestamps();
         });
     }
