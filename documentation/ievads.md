@@ -22,11 +22,10 @@ Automatizācija:
 
 Sistēmas lietotājiem nav nepieciešamas specializētas zināšanas vai prasmes, lai darbotos ar sistēmu. Lietošanas vieglums: sistēma ir viegli lietojama, intuitīva, skaidra un efektīva, ietaupot lietotāju laiku un resursus. Ieguvumi: šīs sistēmas izmantošana ļauj lietotājiem gūt virkni priekšrocību, tostarp palielināt produktivitāti un efektivitāti, samazināt kļūdu risku, palielināt pārskatu precizitāti. Pilna automatizācija šobrīd nav pieejama, sakarā ar to, ka nav iespējams pieslēgt sistēmu reālam uzņēmumam, to nevar izdarīt un neviens to neļaus, administrators ģenerē rēķinus manuāli, kas jau atvieglo grāmatveža darbu.
 
+
 Secinājumi:
 
 Tīmekļa vietne ir moderna un efektīva sistēma, kas var sniegt ievērojamus ieguvumus uzņēmumiem un privātpersonām. Šāda sistēma var atvieglot dāvināšanas procesus, ātri un viegli veikt maksājumus.
-
-Sistēma ir B2B (business-to-business) risinājums (varat apskatīt shēmu).
 
 
 
