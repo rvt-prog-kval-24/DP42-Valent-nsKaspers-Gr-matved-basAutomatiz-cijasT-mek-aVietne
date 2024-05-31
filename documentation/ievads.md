@@ -1,35 +1,32 @@
 ## Ievads
 
-## Grāmatvedības automatizācijas tīmekļa vietne
+## Finanšu sistēmas tīmekļa vietne
 
+Finanšu sistēmas tīmekļa vietne:
 
-Mūsdienās automatizētas sistēmas ir kļuvušas par nozīmīgu instrumentu produktivitātes un efektivitātes celšanai. Šādas sistēmas ļauj ietaupīt laiku un resursus, kurus var novirzīt citām vajadzībām.
+Mūsdienās finanšu sistēmas ir kļuvušas par svarīgu rīku produktivitātes un efektivitātes uzlabošanai. Šādas sistēmas ietaupa laiku un resursus, pārbaudot un analizējot uzņēmuma darbību.
 
-Šī kvalifikācijas darba tēma ir grāmatvedības automatizācijas tīmekļa vietne. Šādas sistēmas aktualitāti nosaka pieaugošā pieprasījuma pēc ērtām un modernām grāmatvedības automatizācijas iespējām. Maksājumu funkcija ļauj ietaupīt laiku un resursus, veicot maksājumus vienkārši un ātri, izmantojot vienu pogu.
+Šī kvalifikācijas darba tēma ir Finanšu sistēmas tīmekļa vietne. Šādas sistēmas aktualitāti nosaka pieaugošais pieprasījums pēc ērtām un mūsdienīgām funkcijām, jo vienā vietnē var gan apmaksāt uzņēmuma rēķinus, gan apskatīt visu maksājumu vēsturi.
 
+Mērķauditorija:
 
-Sistēmas mērķauditorija:
-
-Sistēma paredzēta cilvēkiem, kuri vēlas automatizēt savu grāmatvedību un ērti veikt maksājumus. Bez šādas sistēmas grāmatvedības process var būt apgrūtināts un laikietilpīgs.
+Finanšu sistēmas tīmekļa vietne ir paredzēta plašam lietotāju lokam, tostarp uzņēmumiem, privātpersonām un grāmatvežiem, lai ērti veiktu un apskatītu maksājumus.
 
 Sistēmas priekšrocības:
 
-Grāmatvedības automatizācijas tīmekļa vietne ir aktuāla un nepieciešama sistēma, jo tā piedāvā vairākas priekšrocības salīdzinājumā ar esošajiem analogiem un var sniegt lietotājiem ievērojamus ieguvumus, vienkāršību, un, salīdzinot, mana sistēma ir visma (horizon/hop) konkurents.
+Vietne ir aktuāla un nepieciešama sistēma, jo tai ir vairākas priekšrocības salīdzinājumā ar esošajām sistēmām un tā var sniegt ievērojamas priekšrocības lietotājiem vienkāršības ziņā un salīdzinājumā ar konkurentu “mansjums”.
+
 
 
 Automatizācija:
 
-Sistēma ir automatizēta, kas nozīmē, ka lietotājiem nav nepieciešamas īpašas zināšanas vai prasmes, lai to izmantotu.
-Ērta lietošana: Sistēma ir ērta lietošanā, intuitīva, viegli saprotama un efektīva, kas ļauj lietotājiem ietaupīt laiku un resursus.
-Ieguvumi: Šīs sistēmas izmantošana ļauj lietotājiem gūt vairākus ieguvumus, tostarp:
-Palielināt peļņu un uzlabot biznesa darbību
-Ietaupīt laiku un resursus
-Uzlabot produktivitāti un efektivitāti
-Samazināt kļūdu risku
-Paaugstināt atskaišu precizitāti
+Sistēmas lietotājiem nav nepieciešamas specializētas zināšanas vai prasmes, lai darbotos ar sistēmu. Lietošanas vieglums: sistēma ir viegli lietojama, intuitīva, skaidra un efektīva, ietaupot lietotāju laiku un resursus. Ieguvumi: šīs sistēmas izmantošana ļauj lietotājiem gūt virkni priekšrocību, tostarp palielināt produktivitāti un efektivitāti, samazināt kļūdu risku, palielināt pārskatu precizitāti. Pilna automatizācija šobrīd nav pieejama, sakarā ar to, ka nav iespējams pieslēgt sistēmu reālam uzņēmumam, to nevar izdarīt un neviens to neļaus, administrators ģenerē rēķinus manuāli, kas jau atvieglo grāmatveža darbu.
 
+Secinājumi:
 
-Grāmatvedības automatizācijas tīmekļa vietne ar maksājumu funkciju ir moderna un efektīva sistēma, kas var sniegt ievērojamus ieguvumus uzņēmumiem un privātpersonām. Šāda sistēma ļauj automatizēt grāmatvedības procesus, veikt maksājumus ātri un ērti, kā arī ietaupīt laiku un resursus.
+Tīmekļa vietne ir moderna un efektīva sistēma, kas var sniegt ievērojamus ieguvumus uzņēmumiem un privātpersonām. Šāda sistēma var atvieglot dāvināšanas procesus, ātri un viegli veikt maksājumus.
+
+Sistēma ir B2B (business-to-business) risinājums (varat apskatīt shēmu).
 
 
 
